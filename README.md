@@ -27,7 +27,7 @@ s.bind(('localhost', 9999))
 
 * Use the listen() function to listen for connection and provide status “waiting to connect”.
 s.listen(3)
-print('Waiting for connections')
+print('Waiting for connections') 
 
 
 * While loop to accept connection, the recv() function to accept name from the client and decode() to turn byte format to string. Then print the status and send() function to welcome the client with bytes() function that formats the message.
