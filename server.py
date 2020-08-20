@@ -19,4 +19,7 @@ while True:
 
     if True:
         c.send(bytes('Thank you for working with us', 'utf-8'))
+
+    else:
+        print("We could not connect with our clients at the moment")
     c.close()
