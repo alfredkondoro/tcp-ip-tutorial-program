@@ -10,11 +10,10 @@ print('Waiting for connections')
 
 while True:
     c, addr = s.accept()
-    name = c.recv(1024).decode()
 
-    print("Connected with", addr, name)
-    
-
+    print("Connected with", addr)
     c.send(bytes('Welcome to Alfreds Server', 'utf-8'))
 
+    name = c.recv(1024).decode()
+    print("Our client\'s name is", name)
     c.close()
