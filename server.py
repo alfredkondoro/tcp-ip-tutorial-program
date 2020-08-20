@@ -16,4 +16,7 @@ while True:
 
     name = c.recv(1024).decode()
     print("Our client\'s name is", name)
+
+    if True:
+        c.send(bytes('Thank you for working with us', 'utf-8'))
     c.close()
