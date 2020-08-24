@@ -10,12 +10,12 @@ if True:
 
     while True:
         data = input('Input: ')
-        if data == 'Close':
-            ins = 'yes'
+        if data == '#close':
+            ins = '#close'
             c.send(bytes(ins, 'utf-8'))
             break
         else:
             c.send(bytes(data, 'utf-8'))
-            print(c.recv(1024).decode())
+            print('Server:',c.recv(1024).decode())
 
 c.close()
